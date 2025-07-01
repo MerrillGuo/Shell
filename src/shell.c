@@ -196,33 +196,6 @@ char *shell_read_line(void)
 
 char **shell_split_line(char *line)
 {
-  // int bufsize = GSH_TOK_BUFSIZE, position = 0;
-  // char **tokens = malloc(bufsize * sizeof(char*));
-  // char *token;
-
-  // if (!tokens) {
-  //   fprintf(stderr, "gsh: allocation error\n");
-  //   exit(EXIT_FAILURE);
-  // }
-
-  // token = strtok(line, GSH_TOK_DELIM);
-  // while (token != NULL) {
-  //   tokens[position] = token;
-  //   position++;
-
-  //   if (position >= bufsize) {
-  //     bufsize += GSH_TOK_BUFSIZE;
-  //     tokens = realloc(tokens, bufsize * sizeof(char*));
-  //     if (!tokens) {
-  //       fprintf(stderr, "gsh: allocation error\n");
-  //       exit(EXIT_FAILURE);
-  //     }
-  //   }
-
-  //   token = strtok(NULL, GSH_TOK_DELIM);
-  // }
-  // tokens[position] = NULL;
-  // return tokens;
   int bufsize = SHELL_TOK_BUFSIZE, position = 0;
   char **tokens = malloc(bufsize * sizeof(char*));
   char *start = line;
